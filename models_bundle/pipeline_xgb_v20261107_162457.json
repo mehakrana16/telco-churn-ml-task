@@ -1,0 +1,50 @@
+{
+  "version": "20261107_162457",
+  "sklearn": "1.8.0",
+  "target": "Churn",
+  "features": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "cv_results": {
+    "random_guess": {
+      "cv_f1": 0.2692660627552478,
+      "cv_roc_auc": 0.5023362114399763
+    },
+    "logreg_baseline": {
+      "cv_f1": 0.6294921224518231,
+      "cv_roc_auc": 0.8458204934359299
+    },
+    "rf_baseline": {
+      "cv_f1": 0.5436787965367801,
+      "cv_roc_auc": 0.8248315426261034
+    },
+    "xgb_tuned": {
+      "cv_f1": 0.5929657083792942,
+      "best_params": {
+        "model__subsample": 0.7,
+        "model__n_estimators": 600,
+        "model__max_depth": 6,
+        "model__learning_rate": 0.01,
+        "model__colsample_bytree": 0.9
+      }
+    }
+  }
+}
